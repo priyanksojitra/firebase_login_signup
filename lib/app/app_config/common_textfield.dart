@@ -1,15 +1,36 @@
 import 'package:flutter/material.dart';
 
-class Commontextfield extends StatefulWidget {
-  const Commontextfield({Key? key}) : super(key: key);
+class Commontextfield extends StatelessWidget {
+  final Widget? icon;
+  final String? labelText;
+  final TextEditingController? controller;
 
-  @override
-  State<Commontextfield> createState() => _CommontextfieldState();
-}
+  const Commontextfield(
+      {Key? key,
+      required this.icon,
+      required this.labelText,
+      required this.controller})
+      : super(key: key);
 
-class _CommontextfieldState extends State<Commontextfield> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: SizedBox(
+        height: 45,
+        child: TextField(
+          controller: controller,
+          decoration: InputDecoration(
+          border: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(10.0),
+          ),
+            filled: true,
+            fillColor: const Color(0xffEFEFEF),
+            labelText: labelText,
+            prefixIcon: icon,
+          ),
+        ),
+      ),
+    );
   }
 }

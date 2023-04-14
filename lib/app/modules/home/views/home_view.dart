@@ -1,10 +1,9 @@
 import 'package:firebase_login_signup/app/app_config/app_constant.dart';
 import 'package:firebase_login_signup/app/app_config/common_elevatedbutton.dart';
-import 'package:firebase_login_signup/app/modules/sign_in/views/sign_in_view.dart';
+import 'package:firebase_login_signup/app/app_config/common_textbutton.dart';
 import 'package:firebase_login_signup/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../sign_in/views/sign_in_view.dart';
 import '../controllers/home_controller.dart';
 
 class HomeView extends GetView<HomeController> {
@@ -61,7 +60,7 @@ class HomeView extends GetView<HomeController> {
                     const Text("Discover Amazing Thing Near Around You.",
                         style: TextStyle(fontSize: 12, color: Colors.black)),
                     AppConstant.size(height1: 30),
-                    CommonElevatedbutton(
+                    Commonelevatedbutton(
                       text: const Text(
                         "Sign in",
                       ),
@@ -71,15 +70,16 @@ class HomeView extends GetView<HomeController> {
                       },
                     ),
                     AppConstant.size(height1: 10),
-                    CommonElevatedbutton(
+                    Commonelevatedbutton(
                       text: const Text(
                         "Sign Up",
                         style: TextStyle(color: Color(0xff7972E6)),
+
                       ),
                       buttoncolor: Colors.white,
                       side:
                           const BorderSide(color: Color(0xff7972E6), width: 2),
-                      onpress: () {},
+                      onpress: () { Get.toNamed(Routes.SIGN_UP);},
                     ),
                     AppConstant.size(height1: 10),
                     Row(
@@ -143,7 +143,12 @@ class HomeView extends GetView<HomeController> {
                 ),
               ),
               AppConstant.size(height1: 70),
-              const Text("SKIP", style: TextStyle(color: Colors.black))
+              const CommonTextbutton(
+                text: Text(
+                  "SKIP",
+                  style: TextStyle(color: Colors.black),
+                ),
+              ),
             ],
           ),
         ]));
