@@ -8,6 +8,7 @@ abstract class Routes {
   static const STARTUP = _Paths.STARTUP;
   static const SIGN_IN = _Paths.SIGN_IN;
   static const SIGN_UP = _Paths.SIGN_UP;
+  static const LOGIN_WITH_NUMBER = _Paths.LOGIN_WITH_NUMBER;
 }
 
 abstract class _Paths {
@@ -17,4 +18,5 @@ abstract class _Paths {
   static const STARTUP = '/startup';
   static const SIGN_IN = '/sign-in';
   static const SIGN_UP = '/sign-up';
+  static const LOGIN_WITH_NUMBER = '/login-with-number';
 }
