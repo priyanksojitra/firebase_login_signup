@@ -6,8 +6,11 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import '../controllers/home_controller.dart';
 
-class HomeView extends GetView<HomeController> {
-  const HomeView({Key? key}) : super(key: key);
+class HomeView extends GetView<HomeController>{
+  HomeView({Key? key}) : super(key: key);
+
+  @override
+  final HomeController controller = HomeController();
 
   @override
   Widget build(BuildContext context) {
@@ -74,12 +77,13 @@ class HomeView extends GetView<HomeController> {
                       text: const Text(
                         "Sign Up",
                         style: TextStyle(color: Color(0xff7972E6)),
-
                       ),
                       buttoncolor: Colors.white,
                       side:
                           const BorderSide(color: Color(0xff7972E6), width: 2),
-                      onpress: () { Get.toNamed(Routes.SIGN_UP);},
+                      onpress: () {
+                        Get.toNamed(Routes.SIGN_UP);
+                      },
                     ),
                     AppConstant.size(height1: 10),
                     Row(
@@ -112,30 +116,40 @@ class HomeView extends GetView<HomeController> {
                     ),
                     AppConstant.size(height1: 20),
                     Padding(
-                      padding: const EdgeInsets.only(left: 55),
+                      padding: const EdgeInsets.only(left: 120),
                       child: Row(children: [
                         Image.asset(
-                          "facebook.png",
+                          "assets/facebook.png",
                           width: 30,
                           height: 30,
                         ),
                         AppConstant.size(width1: 10),
                         Image.asset(
-                          "twitter.png",
+                          "assets/twitter.png",
                           width: 30,
                           height: 30,
                         ),
                         AppConstant.size(width1: 10),
-                        Image.asset(
-                          "google.png",
-                          width: 30,
-                          height: 30,
+                        InkWell(
+                          onTap: () {
+                            controller.signup();
+                          },
+                          child: Image.asset(
+                            "assets/google.png",
+                            width: 30,
+                            height: 30,
+                          ),
                         ),
                         AppConstant.size(width1: 10),
-                        Image.asset(
-                          "smartphone-call.png",
-                          width: 30,
-                          height: 30,
+                        InkWell(
+                          onTap: () {
+                            Get.toNamed(Routes.LOGIN_WITH_NUMBER);
+                          },
+                          child: Image.asset(
+                            "assets/smartphone-call.png",
+                            width: 30,
+                            height: 30,
+                          ),
                         ),
                       ]),
                     )

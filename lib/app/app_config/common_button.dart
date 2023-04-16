@@ -26,25 +26,25 @@ class _CommonButtonState extends State<CommonButton> {
         padding: const EdgeInsets.only(left: 50),
         child: Row(children: [
           Image.asset(
-            "facebook.png",
+            "assets/facebook.png",
             width: 30,
             height: 30,
           ),
           AppConstant.size(width1: 10),
           Image.asset(
-            "twitter.png",
+            "assets/twitter.png",
             width: 30,
             height: 30,
           ),
           AppConstant.size(width1: 10),
           Image.asset(
-            "google.png",
+            "assets/google.png",
             width: 30,
             height: 30,
           ),
           AppConstant.size(width1: 10),
           Image.asset(
-            "smartphone-call.png",
+            "assets/smartphone-call.png",
             width: 30,
             height: 30,
           ),

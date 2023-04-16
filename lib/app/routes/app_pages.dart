@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import '../modules/firebase_auth_service/bindings/firebase_auth_service_binding.dart';
+import '../modules/firebase_auth_service/views/firebase_auth_service_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login_with_number/bindings/login_with_number_binding.dart';
@@ -19,7 +21,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HELLO,
-      page: () => const HomeView(),
+      page: () => HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.LOGIN_WITH_NUMBER,
       page: () => const LoginWithNumberView(),
       binding: LoginWithNumberBinding(),
+    ),
+    GetPage(
+      name: _Paths.FIREBASE_AUTH_SERVICE,
+      page: () => const FirebaseAuthServiceView(),
+      binding: FirebaseAuthServiceBinding(),
     ),
   ];
 }

@@ -28,7 +28,7 @@ class SignInView extends GetView<SignInController> {
               height: 250,
               width: double.infinity,
               child: Padding(
-                padding: const EdgeInsets.only(right: 250, bottom: 190),
+                padding: const EdgeInsets.only(right: 350, bottom: 190),
                 child: IconButton(
                     onPressed: () {
                       Get.back();

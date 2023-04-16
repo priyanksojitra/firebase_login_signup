@@ -9,6 +9,7 @@ abstract class Routes {
   static const SIGN_IN = _Paths.SIGN_IN;
   static const SIGN_UP = _Paths.SIGN_UP;
   static const LOGIN_WITH_NUMBER = _Paths.LOGIN_WITH_NUMBER;
+  static const FIREBASE_AUTH_SERVICE = _Paths.FIREBASE_AUTH_SERVICE;
 }
 
 abstract class _Paths {
@@ -19,4 +20,5 @@ abstract class _Paths {
   static const SIGN_IN = '/sign-in';
   static const SIGN_UP = '/sign-up';
   static const LOGIN_WITH_NUMBER = '/login-with-number';
+  static const FIREBASE_AUTH_SERVICE = '/firebase-auth-service';
 }
