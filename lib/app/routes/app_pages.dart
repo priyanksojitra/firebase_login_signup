@@ -1,7 +1,4 @@
 import 'package:get/get.dart';
-
-import '../modules/firebase_auth_service/bindings/firebase_auth_service_binding.dart';
-import '../modules/firebase_auth_service/views/firebase_auth_service_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
 import '../modules/login_with_number/bindings/login_with_number_binding.dart';
@@ -10,13 +7,13 @@ import '../modules/sign_in/bindings/sign_in_binding.dart';
 import '../modules/sign_in/views/sign_in_view.dart';
 import '../modules/sign_up/bindings/sign_up_binding.dart';
 import '../modules/sign_up/views/sign_up_view.dart';
-
+import '../modules/stream_builder/bindings/stream_builder_binding.dart';
 part 'app_routes.dart';
 
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.HOME;
+  static const INITIAL = Routes.STREAM_BUILDER;
 
   static final routes = [
     GetPage(
@@ -40,9 +37,9 @@ class AppPages {
       binding: LoginWithNumberBinding(),
     ),
     GetPage(
-      name: _Paths.FIREBASE_AUTH_SERVICE,
-      page: () => const FirebaseAuthServiceView(),
-      binding: FirebaseAuthServiceBinding(),
+      name: _Paths.STREAM_BUILDER,
+      page: () => StreamBuilderView(),
+      binding: StreamBuilderBinding(),
     ),
   ];
 }

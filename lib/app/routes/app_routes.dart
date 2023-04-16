@@ -10,6 +10,7 @@ abstract class Routes {
   static const SIGN_UP = _Paths.SIGN_UP;
   static const LOGIN_WITH_NUMBER = _Paths.LOGIN_WITH_NUMBER;
   static const FIREBASE_AUTH_SERVICE = _Paths.FIREBASE_AUTH_SERVICE;
+  static const STREAM_BUILDER = _Paths.STREAM_BUILDER;
 }
 
 abstract class _Paths {
@@ -21,4 +22,5 @@ abstract class _Paths {
   static const SIGN_UP = '/sign-up';
   static const LOGIN_WITH_NUMBER = '/login-with-number';
   static const FIREBASE_AUTH_SERVICE = '/firebase-auth-service';
+  static const STREAM_BUILDER = '/stream-builder';
 }

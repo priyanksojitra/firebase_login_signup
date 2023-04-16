@@ -3,7 +3,9 @@ import 'package:google_sign_in/google_sign_in.dart';
 
 class Authservice {
 // Google sign in
-  signInWithGoogle() async {
+
+ static Future signInWithGoogle() async {
+
     // begin Interective sign process
     final GoogleSignInAccount? gUser = await GoogleSignIn().signIn();
 
@@ -17,6 +19,9 @@ class Authservice {
       accessToken: gAuth.accessToken,
       idToken: gAuth.idToken,
     );
+
+   //sign in anonymous
+
 
     // finally let's sign in
 

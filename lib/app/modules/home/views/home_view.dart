@@ -1,6 +1,7 @@
 import 'package:firebase_login_signup/app/app_config/app_constant.dart';
 import 'package:firebase_login_signup/app/app_config/common_elevatedbutton.dart';
 import 'package:firebase_login_signup/app/app_config/common_textbutton.dart';
+import 'package:firebase_login_signup/app/modules/firebase_auth_service/views/firebase_auth_service_view.dart';
 import 'package:firebase_login_signup/app/routes/app_pages.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -132,7 +133,7 @@ class HomeView extends GetView<HomeController>{
                         AppConstant.size(width1: 10),
                         InkWell(
                           onTap: () {
-                            controller.signup();
+                           Authservice. signInWithGoogle();
                           },
                           child: Image.asset(
                             "assets/google.png",
